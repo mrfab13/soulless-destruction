@@ -58,11 +58,15 @@ public class mainMenu : MonoBehaviour
     {
         if (LevelToggle == true)
         {
+
+
             LevelToggle = false;
             StartCoroutine(Down(state.level, state.menu));
         }
         else
         {
+
+
             LevelToggle = true;
             StartCoroutine(Down(state.menu, state.level));
         }
@@ -72,11 +76,15 @@ public class mainMenu : MonoBehaviour
     {
         if (creditsToggle == true)
         {
+
+
             creditsToggle = false;
             StartCoroutine(Down(state.credits, state.menu));
         }
         else
         {
+
+
             creditsToggle = true;
             StartCoroutine(Down(state.menu, state.credits));
         }
@@ -104,6 +112,14 @@ public class mainMenu : MonoBehaviour
 
     public IEnumerator Down(state fromX, state toY)
     {
+        canvaspos = new Vector3((this.gameObject.GetComponent<RectTransform>().rect.width / 2) * canvas.transform.localScale.x, (this.gameObject.GetComponent<RectTransform>().rect.height / 2) * canvas.transform.localScale.y, 0.0f);
+        cListtop = new Vector3(0.0f, this.gameObject.GetComponent<RectTransform>().rect.height, 0.0f);
+        cListbot = new Vector3(0.0f, -this.gameObject.GetComponent<RectTransform>().rect.height, 0.0f);
+        MListtop = new Vector3(0.0f, this.gameObject.GetComponent<RectTransform>().rect.height, 0.0f);
+        MListbot = new Vector3(0.0f, -this.gameObject.GetComponent<RectTransform>().rect.height, 0.0f);
+        LListtop = new Vector3(0.0f, this.gameObject.GetComponent<RectTransform>().rect.height, 0.0f);
+        LListbot = new Vector3(0.0f, -this.gameObject.GetComponent<RectTransform>().rect.height, 0.0f);
+
         GameObject from = null;
         Vector3 from1 = Vector3.zero;
         Vector3 from2 = Vector3.zero;
