@@ -42,7 +42,7 @@ public class ads : MonoBehaviour
     public void OpenTwitter()
     {
         string twitterAdress = "http://twitter.com/intent/tweet";
-        string message = "i sure love [game name]";
+        string message = "i sure love Soulless Destruction";
         string descriptionPeram = "wow its even got twitter intergration, dowload from here and pay for no ads because im broke pls and thx :)";
         string storelink = "https://sleepdeficiency.studio/";
 

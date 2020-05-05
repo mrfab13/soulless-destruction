@@ -17,10 +17,12 @@ public class missile : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-
+        gameLogic tmp = GameObject.Find("Main Camera").GetComponent<gameLogic>();
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, 10.0f, Civilian);
         for (int i = hitColliders.Length; i > 0; i--)
         {
+            tmp.kills--;
+            tmp.updatedkills();
             Destroy(hitColliders[i - 1].gameObject);
         }
 

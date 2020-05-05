@@ -8,6 +8,14 @@ public class gameLogic : MonoBehaviour
     public float timeLeft;
     public GameObject UIobj;
     public bool gameover = false;
+    public GameObject killsUI;
+    public int kills;
+
+    private void Start()
+    {
+        kills = GameObject.Find("people").transform.childCount;
+        updatedkills();
+    }
 
     void Update()
     {
@@ -30,4 +38,10 @@ public class gameLogic : MonoBehaviour
         }
 
     }
+
+    public void updatedkills()
+    {
+        killsUI.GetComponent<Text>().text = "TANGOS " + kills.ToString();
+    }
+
 }

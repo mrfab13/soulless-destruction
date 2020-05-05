@@ -72,6 +72,9 @@ public class AC130 : MonoBehaviour
     {
         if (reloading <= 0.0f)
         {
+            reloading = Mathf.Infinity;
+
+
             fire.Play();
 
             Instantiate(cloud, this.gameObject.transform.position + (transform.forward * 20.0f) + (transform.right * 20.0f), Quaternion.identity);

@@ -9,7 +9,7 @@ public class IAP : MonoBehaviour, IStoreListener
 {
     private static IStoreController storeController;
     private static IExtensionProvider extensionProvider;
-    public static string RemoveAds = "removeads";
+    public static string RemoveAds = "moveads";
 
     void Start()
     {
@@ -28,7 +28,7 @@ public class IAP : MonoBehaviour, IStoreListener
     {
         if (String.Equals(args.purchasedProduct.definition.id, RemoveAds, StringComparison.Ordinal))
         {
-            Debug.Log("pruchacing product");
+            Debug.Log("turn ads off");
             PlayerPrefs.SetInt("noads", 1);
             //apply other no ads things here
         }
@@ -45,6 +45,10 @@ public class IAP : MonoBehaviour, IStoreListener
         if (isInitialized() == true)
         {
             Product product = storeController.products.WithID(productID);
+
+            Debug.Log(productID);
+            Debug.Log(product.transactionID);
+
             if ((product != null) && product.availableToPurchase)
             {
                 Debug.Log("purchacing product");
