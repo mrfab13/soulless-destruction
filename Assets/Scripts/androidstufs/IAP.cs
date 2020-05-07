@@ -9,7 +9,7 @@ public class IAP : MonoBehaviour, IStoreListener
 {
     private static IStoreController storeController;
     private static IExtensionProvider extensionProvider;
-    public static string RemoveAds = "moveads";
+    public static string RemoveAds = "removeads";
 
     void Start()
     {

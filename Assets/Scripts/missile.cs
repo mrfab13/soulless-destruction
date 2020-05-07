@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class missile : MonoBehaviour
 {
-    private float bulletSpeed;
+    public float bulletSpeed;
 
     public GameObject Bigexplosion;
 

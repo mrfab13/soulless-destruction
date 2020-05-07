@@ -7,7 +7,7 @@ using GooglePlayGames.BasicApi;
 
 public class googleplay : MonoBehaviour
 {
-    private bool isUserAuthenticated = true;
+    private bool isUserAuthenticated = false;
 
     void Start()
     {
@@ -15,7 +15,6 @@ public class googleplay : MonoBehaviour
         PlayGamesPlatform.DebugLogEnabled = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (isUserAuthenticated == false)
@@ -26,6 +25,7 @@ public class googleplay : MonoBehaviour
                 {
                     Debug.Log("logged in");
                     isUserAuthenticated = true;
+                    GameObject.Find("ads").GetComponent<achivments>().openedTheGame();
                 }
                 else
                 {
