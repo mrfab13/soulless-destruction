@@ -389,9 +389,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   Cam: {fileID: 6411469031958031035}
-  speed: -0.25
-  height: 130
-  circleSize: 100
+  speed: 0.2
+  height: 160
+  circleSize: 130
   aiming: {x: 0, y: 0}
   camshake: {x: 0, y: 0}
   targetoffset: {x: 0, y: 0, z: 0}
@@ -408,13 +408,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   missile: {fileID: 8553256468905094788, guid: 84793ad3f09668d438f7e7071be10765, type: 3}
-  missileSpeed: 100
+  missileSpeed: 130
   cam: {fileID: 6411469031958031028}
   joystick: {fileID: 0}
   Firebutton: {fileID: 0}
   cloud: {fileID: 3304730142807765423, guid: 81ae797e523e24b4fa71208744a4ffbd, type: 3}
   fire: {fileID: 2966254205077868418}
-  reload: {fileID: 0}
+  reload: {fileID: 1771468326}
   reloading: 0
 --- !u!114 &6411469031958031039
 MonoBehaviour:
@@ -428,9 +428,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0547723b0cebb5843aa1d35708bd772b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 30
+  timeLeft: 0
   UIobj: {fileID: 0}
   gameover: 0
+  killsUI: {fileID: 0}
+  kills: 0
 --- !u!82 &1687258589
 AudioSource:
   m_ObjectHideFlags: 0
