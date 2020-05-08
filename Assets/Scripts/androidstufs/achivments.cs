@@ -6,6 +6,9 @@ using UnityEngine.SocialPlatforms;
 
 public class achivments : MonoBehaviour
 {
+    private int currentscore;
+
+
     public void openedTheGame()
     {
         Social.ReportProgress(SoullessDestructionAchievements.achievement_play_the_game, 100, (bool success) => { });
@@ -28,6 +31,7 @@ public class achivments : MonoBehaviour
     }
 
 
+
     public void openAchivments()
     {
         Social.localUser.Authenticate((bool success) =>
@@ -46,23 +50,9 @@ public class achivments : MonoBehaviour
 
     public void updateleaderboard()
     {
-        long currentscore = 999;
-
-        Social.LoadScores(SoullessDestructionAchievements.leaderboard_ads_watched, scores =>
-        {
-            if (scores.Length > 0)
-            {
-                foreach (IScore score in scores)
-                {
-                    if (score.userID == Social.localUser.id)
-                    {
-                        currentscore = score.value;
-                    }
-                }
-            }
-        });
-
+        currentscore = PlayerPrefs.GetInt("adswatched");
         currentscore += 1;
+        PlayerPrefs.SetInt("adswatched", currentscore);
 
         Social.ReportScore(currentscore, SoullessDestructionAchievements.leaderboard_ads_watched, (bool sucess) =>
         {

@@ -50,8 +50,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 6411469031958031035, guid: d2b94dae6456dde4a8cf502b246b1add,
-    type: 3}
+  m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -113,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70def75222c1a354a8a5b5324a3db2c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 6411469031958031030, guid: d2b94dae6456dde4a8cf502b246b1add, type: 3}
+  cam: {fileID: 0}
 --- !u!1 &5631415840057253496
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,9 +209,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5631415840886078741}
-  - component: {fileID: 5631415840886078740}
-  - component: {fileID: 5631415840886078739}
   - component: {fileID: 5631415840886078738}
+  - component: {fileID: 285992543}
+  - component: {fileID: 285992544}
+  - component: {fileID: 285992542}
   m_Layer: 8
   m_Name: innocentBystander
   m_TagString: Untagged
@@ -235,15 +235,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5631415840886078740
+--- !u!65 &5631415840886078738
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5631415840886078737}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &285992543
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5631415840886078737}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &5631415840886078739
+  m_Mesh: {fileID: -4032223587392637938, guid: 314b8c8479302ac4ba9356bdcb448ac1, type: 3}
+--- !u!23 &285992544
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -261,7 +274,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 866fa2f9d27156f4cb771f1199b1e240, type: 2}
+  - {fileID: 2100000, guid: 5b813b708973aac41b8b8c811530f700, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -282,16 +295,21 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5631415840886078738
-BoxCollider:
+--- !u!114 &285992542
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5631415840886078737}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a610bb59ddd91d641be34eedd0e27d51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positions:
+  - {x: -15.89, y: -7.06, z: -2.46}
+  - {x: -15.89, y: -7.06, z: 20.23}
+  - {x: -4.25, y: -7.06, z: 20.23}
+  poscurrent: 0
+  movespeed: 2.5
