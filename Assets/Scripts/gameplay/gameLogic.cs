@@ -7,7 +7,7 @@ public class gameLogic : MonoBehaviour
 {
     public float timeLeft;
     public GameObject UIobj;
-    public bool gameover = false;
+    public int gameover = 0;
     public GameObject killsUI;
     public int kills;
 
@@ -19,11 +19,21 @@ public class gameLogic : MonoBehaviour
 
     void Update()
     {
+        if (gameover != 0)
+        {
+            return;
+        }
+
         timeLeft -= Time.deltaTime;
         if (timeLeft <= 0.0f)
         {
             timeLeft = 0.0f;
-            gameover = true;
+            gameover = 1;
+        }
+
+        if (kills < 1)
+        {
+            gameover = 2;
         }
 
         if (timeLeft < 9.0f)

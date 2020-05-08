@@ -22,6 +22,7 @@ public class ads : MonoBehaviour
         {
             case ShowResult.Finished:
                 {
+                    this.GetComponent<achivments>().updateleaderboard();
                     Debug.Log("player finished ad");
                     break;
                 }

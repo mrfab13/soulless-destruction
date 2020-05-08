@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms;
 
 public class mainMenu : MonoBehaviour
 {
@@ -59,13 +60,35 @@ public class mainMenu : MonoBehaviour
     {
         if (LevelToggle == true)
         {
-
-
             LevelToggle = false;
             StartCoroutine(Down(state.level, state.menu));
         }
         else
         {
+            Social.LoadAchievements(achives =>
+            {
+                if (achives.Length > 0)
+                {
+                    foreach (IAchievement achive in achives)
+                    {
+                        if (achive.id == SoullessDestructionAchievements.achievement_completed_level_1)
+                        {
+                            if (achive.completed == true)
+                            {
+                                GameObject.Find("levle2").GetComponent<Button>().interactable = true;
+                            }
+                        }
+                        if (achive.id == SoullessDestructionAchievements.achievement_completed_level_2)
+                        {
+                            if (achive.completed == true)
+                            {
+                                GameObject.Find("levle3").GetComponent<Button>().interactable = true;
+                            }
+                        }
+                    }
+                }
+            });
+
 
 
             LevelToggle = true;
@@ -77,18 +100,19 @@ public class mainMenu : MonoBehaviour
     {
         if (creditsToggle == true)
         {
-
-
             creditsToggle = false;
             StartCoroutine(Down(state.credits, state.menu));
         }
         else
         {
-
-
             creditsToggle = true;
             StartCoroutine(Down(state.menu, state.credits));
         }
+    }
+
+    public void showLeaderboard()
+    {
+        Social.ShowLeaderboardUI();
     }
 
     public void quit()

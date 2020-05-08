@@ -28,7 +28,7 @@ public static class SoullessDestructionAchievements
         public const string achievement_completed_level_3 = "CgkI2bjx4p8NEAIQBA"; // <GPGSID>
         public const string achievement_no_ads = "CgkI2bjx4p8NEAIQBQ"; // <GPGSID>
         public const string achievement_completed_level_1 = "CgkI2bjx4p8NEAIQAg"; // <GPGSID>
-        public const string leaderboard_number_of_times_app_opened = "CgkI2bjx4p8NEAIQBg"; // <GPGSID>
+        public const string leaderboard_ads_watched = "CgkI2bjx4p8NEAIQBg"; // <GPGSID>
         public const string achievement_play_the_game = "CgkI2bjx4p8NEAIQAQ"; // <GPGSID>
 
 }
