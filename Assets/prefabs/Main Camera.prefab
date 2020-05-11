@@ -389,9 +389,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   Cam: {fileID: 6411469031958031035}
-  speed: 0.2
-  height: 160
-  circleSize: 130
+  speed: -0.2
+  height: 130
+  circleSize: 110
   aiming: {x: 0, y: 0}
   camshake: {x: 0, y: 0}
   targetoffset: {x: 0, y: 0, z: 0}
@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0547723b0cebb5843aa1d35708bd772b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLeft: 0
+  timeLeft: 30
   UIobj: {fileID: 0}
   gameover: 0
   killsUI: {fileID: 0}

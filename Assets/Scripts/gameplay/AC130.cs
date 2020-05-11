@@ -72,29 +72,19 @@ public class AC130 : MonoBehaviour
     {
         if (reloading <= 0.0f)
         {
-            reloading = Mathf.Infinity;
-
-
-            fire.Play();
-
-            Instantiate(cloud, this.gameObject.transform.position + (transform.forward * 20.0f) + (transform.right * 20.0f), Quaternion.identity);
-
-            GameObject tmp = Instantiate(missile, this.gameObject.transform.position + (transform.forward * 20.0f) + (transform.right * 10.0f), Quaternion.identity);
-
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
             {
+                reloading = Mathf.Infinity;
+                Instantiate(cloud, this.gameObject.transform.position + (transform.forward * 20.0f) + (transform.right * 20.0f), Quaternion.identity);
+                fire.Play();
+                StartCoroutine(camshake());
+                GameObject tmp = Instantiate(missile, this.gameObject.transform.position + (transform.forward * 20.0f) + (transform.right * 10.0f), Quaternion.identity);
                 tmp.transform.LookAt(hit.point);
                 tmp.transform.Rotate(new Vector3(90.0f, 0.0f, 0.0f));
                 tmp.GetComponent<missile>().bulletSpeed = missileSpeed;
-
             }
-
-            StartCoroutine(camshake());
         }
-
-
-
     }
 
     public IEnumerator camshake()
