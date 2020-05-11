@@ -155,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0015106201, y: -0.0000076293945}
-  m_SizeDelta: {x: 1518, y: 671.6}
+  m_AnchoredPosition: {x: 0.000015258789, y: 0.6900101}
+  m_SizeDelta: {x: 1518, y: 646.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &180084942
 MonoBehaviour:
@@ -818,15 +818,15 @@ RectTransform:
   m_GameObject: {fileID: 727811709}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 1538336229}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000012636, y: 0.000013351}
-  m_SizeDelta: {x: 1723.8, y: 978.7}
+  m_AnchoredPosition: {x: 15.5, y: 0.5}
+  m_SizeDelta: {x: 7156.7, y: 3855}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &727811711
 MonoBehaviour:
@@ -859,7 +859,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: VAughan :)
+  m_Text: "Everything But BG Music: Vaughan Webb \n\nthis game was created as a project
+    for my andriod development class. enjoy :)\n\nbackground songs:\nGOTH VON CORE
+    - Kay-LynnX10\r"
 --- !u!222 &727811712
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1969,8 +1971,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 695, y: -206}
-  m_SizeDelta: {x: 379.5, y: 167.9}
+  m_AnchoredPosition: {x: 695, y: -202}
+  m_SizeDelta: {x: 379.5, y: 159.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1194883467
 MonoBehaviour:
@@ -2777,7 +2779,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1515745895
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2838,6 +2840,83 @@ RectTransform:
   m_AnchoredPosition: {x: 7, y: 1199}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1577534031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1577534032}
+  - component: {fileID: 1577534034}
+  - component: {fileID: 1577534033}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1577534032
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577534031}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1713374362}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 699.22, y: -403.67}
+  m_SizeDelta: {x: 2473.8, y: 977.02}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1577534033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577534031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 213
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 300
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: yeet
+--- !u!222 &1577534034
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577534031}
+  m_CullTransparentMesh: 0
 --- !u!1 &1686495218
 GameObject:
   m_ObjectHideFlags: 0
@@ -3157,6 +3236,7 @@ RectTransform:
   - {fileID: 617637087}
   - {fileID: 314000755}
   - {fileID: 1194883466}
+  - {fileID: 1577534032}
   m_Father: {fileID: 1951351346}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

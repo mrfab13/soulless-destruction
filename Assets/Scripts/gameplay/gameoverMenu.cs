@@ -57,7 +57,14 @@ public class gameoverMenu : MonoBehaviour
     {
         if (logic.gameover == 1)
         {
-            GameObject.Find("ads").GetComponent<ads>().ShowAD();
+            if (PlayerPrefs.GetInt("noads") == 1)
+            {
+                Debug.Log("thanks suporter");
+            }
+            else
+            {
+                GameObject.Find("ads").GetComponent<ads>().ShowAD();
+            }
         }
 
         SceneManager.LoadScene(0);

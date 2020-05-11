@@ -30,7 +30,7 @@ public class IAP : MonoBehaviour, IStoreListener
         {
             Debug.Log("turn ads off");
             PlayerPrefs.SetInt("noads", 1);
-            //apply other no ads things here
+            GameObject.Find("ads").GetComponent<achivments>().noads();
         }
         else
         {
