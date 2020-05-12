@@ -11,6 +11,8 @@ public class gameoverMenu : MonoBehaviour
     private Vector3 canvaspos;
     public float menuspeed = 1.5f;
 
+    public int level;
+
 
     void Start()
     {
@@ -32,8 +34,19 @@ public class gameoverMenu : MonoBehaviour
             {
                 this.transform.GetChild(1).GetComponent<Text>().text = "well done";
 
+                if (level == 1)
+                {
+                    GameObject.Find("ads").GetComponent<achivments>().level1done();
+                }
+                else if (level == 2)
+                {
+                    GameObject.Find("ads").GetComponent<achivments>().level2done();
+                }
+                else if (level == 3)
+                {
+                    GameObject.Find("ads").GetComponent<achivments>().level3done();
+                }
 
-                GameObject.Find("ads").GetComponent<achivments>().level1done();
             }
         }
     }
@@ -70,8 +83,8 @@ public class gameoverMenu : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void retrylevel()
+    public void retrylevel(int level)
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(level);
     }
 }
